@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for x in map(chr, range(ord('a'), ord('z')+1)):
-    print(x, end="")
+for x in range(97, 123):
+    print('{:c}'.format(x), end='')
