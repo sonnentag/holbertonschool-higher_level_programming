@@ -12,3 +12,4 @@
 ## 10-check_cycle.c
 ## 100-write.py
 ## 101-compile
+## 102-magic_calculation.py
