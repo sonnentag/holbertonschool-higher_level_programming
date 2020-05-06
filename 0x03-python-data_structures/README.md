@@ -11,3 +11,4 @@
 ## 9-max_integer.py
 ## 10-divisible_by_2.py
 ## 11-delete_at.py
+## 12-switch.py
