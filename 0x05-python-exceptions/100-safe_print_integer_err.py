@@ -4,5 +4,5 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
     except Exception as err:
         print('Exception:', err)
-        return False
-    return True
+        return (False)
+    return (True)
