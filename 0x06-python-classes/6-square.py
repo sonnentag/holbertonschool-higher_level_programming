@@ -54,12 +54,13 @@ class Square:
 
         if size == 0:
             print()
+            return
 
-        for tilty in range(position[1]):
+        for x in range(position[1]):
             print()
-        for col in range(size):
-            for tiltx in range(position[0]):
+        for x in range(size):
+            for x in range(position[0]):
                 print(' ', end='')
-            for row in range(size):
+            for x in range(size):
                 print('#', end='')
             print()
