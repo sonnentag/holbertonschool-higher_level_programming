@@ -7,41 +7,49 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """init doc"""
+
         self.__size = size
-        self.__position = position
+        for i in 0, 1:
+            if type(position[i]) is int and position[i] >= 0:
+                self.__position[i] = position[i]
 
     @property
     def position(self):
-        """size property doc"""
+        """position property doc"""
+
         return self.__position
 
     @position.setter
     def position(self, value):
-        """size setter doc"""
+        """position setter doc"""
+
         if not isinstance(value, tuple) or len(value) is not 2:
             raise TypeError(
                 'position must be a tuple of 2 positive integers')
+
         for i in 0, 1:
             if type(value[i]) != int or value[i] < 0:
                 raise TypeError(
                     'position must be a tuple of 2 positive integers')
             else:
-                self.__position[i] = value
+                self.__position[i] = value[i]
 
     @property
     def size(self):
         """size property doc"""
+
         return self.__size
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """size setter doc"""
-        if type(size) != int:
+
+        if type(value) != int:
             raise TypeError('size must be an integer')
-        elif size < 0:
+        elif value < 0:
             raise ValueError('size must be >= 0')
         else:
-            self.__size = size
+            self.__size = value
 
     def area(self):
         """area doc"""
