@@ -53,11 +53,13 @@ class Square:
 
     def area(self):
         """area of square"""
+
         size = self.__size
         return (size * size)
 
     def my_print(self):
         """print square coordinates"""
+
         size = self.__size
         position = self.__position
 
@@ -67,5 +69,26 @@ class Square:
             for x in range(position[1]):
                 print()
             for x in range(size):
-                    print(' ' * position[0], end='')
-                    print('#' * size)
+                print(' ' * position[0], end='')
+                print('#' * size)
+
+    def __str__(self):
+        """Square string for std print func"""
+
+        size = self.__size
+        position = self.__position
+        str = ""
+
+        if size == 0:
+            pass
+        else:
+            for i in range(position[1]):
+                str += "\n"
+            for x in range(size):
+                for i in range(position[0]):
+                    str += " "
+                for i in range(size):
+                    str += "#"
+                if x < (size - 1): 
+                    str += "\n"
+        return str
