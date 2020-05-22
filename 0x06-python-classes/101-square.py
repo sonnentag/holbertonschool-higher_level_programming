@@ -89,6 +89,6 @@ class Square:
                     str += " "
                 for i in range(size):
                     str += "#"
-                if x < (size - 1): 
+                if x < (size - 1):
                     str += "\n"
         return str
