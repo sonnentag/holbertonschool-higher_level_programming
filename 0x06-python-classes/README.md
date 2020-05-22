@@ -6,3 +6,4 @@
 ### 4-square.py
 ### 5-square.py
 ### 6-square.py
+### 101-square.py
