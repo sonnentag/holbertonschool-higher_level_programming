@@ -63,10 +63,9 @@ class Square:
 
         if size == 0:
             print()
-            return
-
-        for x in range(position[1]):
-            print()
-        for x in range(size):
-                print(' ' * position[0], end='')
-                print('#' * size)
+        else:
+            for x in range(position[1]):
+                print()
+            for x in range(size):
+                    print(' ' * position[0], end='')
+                    print('#' * size)
