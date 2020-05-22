@@ -11,7 +11,6 @@ class Square:
             size - size of square
             position - coordinates of a square        """
 
-
         self.size = size
         self.position = position
 
