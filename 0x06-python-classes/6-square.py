@@ -1,48 +1,49 @@
 #!/usr/bin/python3
-"""Square module"""
+"""6-square module"""
 
 
 class Square:
     """Square class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """init doc"""
+        """init square
+        Args:
+            size - size of square
+            position - coordinates of a square        """
 
-        self.__size = size
-        for i in 0, 1:
-            if type(position[i]) is int and position[i] >= 0:
-                self.__position[i] = position[i]
+
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
-        """position property doc"""
+        """position getter"""
 
         return self.__position
 
     @position.setter
     def position(self, value):
-        """position setter doc"""
+        """position setter"""
 
-        if not isinstance(value, tuple) or len(value) is not 2:
+        if not isinstance(value, tuple) or len(value) > 2:
             raise TypeError(
                 'position must be a tuple of 2 positive integers')
 
         for i in 0, 1:
-            if type(value[i]) != int or value[i] < 0:
+            if (type(value[i]) != int or value[i] < 0):
                 raise TypeError(
                     'position must be a tuple of 2 positive integers')
-            else:
-                self.__position[i] = value[i]
+        self.__position = value
 
     @property
     def size(self):
-        """size property doc"""
+        """size getter"""
 
         return self.__size
 
     @size.setter
     def size(self, value):
-        """size setter doc"""
+        """size setter"""
 
         if type(value) != int:
             raise TypeError('size must be an integer')
@@ -52,12 +53,12 @@ class Square:
             self.__size = value
 
     def area(self):
-        """area doc"""
+        """area of square"""
         size = self.__size
-        return size * size
+        return (size * size)
 
     def my_print(self):
-        """my_print doc"""
+        """print square coordinates"""
         size = self.__size
         position = self.__position
 
@@ -68,8 +69,5 @@ class Square:
         for x in range(position[1]):
             print()
         for x in range(size):
-            for x in range(position[0]):
-                print(' ', end='')
-            for x in range(size):
-                print('#', end='')
-            print()
+                print(' ' * position[0], end='')
+                print('#' * size)
