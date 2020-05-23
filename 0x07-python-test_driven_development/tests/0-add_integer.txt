@@ -1,0 +1,43 @@
+# 0-add_integer function
+
+Import the function:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test adding two integers:
+    >>> add_integer(13, 26)
+    39
+
+test adding two floats:
+    >>> add_integer(33.3, 66.6)
+    99
+
+test adding int to float:
+    >>> add_integer(33, 66.6)
+    99
+
+test adding a negative:
+    >>> add_integer(99, -1)
+    98
+
+test adding a negative float:
+    >>> add_integer(99, -9.8)
+    90
+
+test adding a char:
+    >>> add_integer(novar + 2)
+    Traceback (most recent call last):
+          ...
+    NameError: name 'novar' is not defined
+
+test adding a string:
+    >>> add_integer('str' + 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: Can't convert 'int' object to str implicitly
+
+test adding a list:
+    >>> add_integer([9, 7])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
