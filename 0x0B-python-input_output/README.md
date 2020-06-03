@@ -4,3 +4,5 @@
 ### 2-read_lines.py
 ### 3-write_file.py
 ### 4-append_write.py
+### 5-to_json_string.py
+### 6-from_json_string.py
