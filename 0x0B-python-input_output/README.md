@@ -6,3 +6,6 @@
 ### 4-append_write.py
 ### 5-to_json_string.py
 ### 6-from_json_string.py
+### 7-save_to_json_file.py
+### 8-load_from_json_file.py
+### 9-add_item.py
