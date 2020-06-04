@@ -21,5 +21,5 @@ class Student:
                 if type(attr) == str and attr in self.__dict__:
                     attribs[attr] = self.__dict__.get(attr)
             return (attribs)
-        
+
         return (self.__dict__)
