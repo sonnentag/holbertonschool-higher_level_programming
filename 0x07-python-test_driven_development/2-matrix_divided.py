@@ -22,6 +22,6 @@ def matrix_divided(matrix, div):
             x = len(row)
 
     for row in matrix:
-            mtrx.append([round((x / div)+10**(-2*6), 2) for x in row])
+            mtrx.append([round((x / div), 2) for x in row])
 
     return (mtrx)
