@@ -1,0 +1,32 @@
+# text indentation tests
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+not a string:
+    >>> text_indentation(42)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+no input:
+    >>> text_indentation()
+
+    >>> text_indentation("")
+
+over max input:
+    >>> text_indentation("x" * 4611686018427387903 + " " + "x" * 4611686018427387903)
+    Traceback (most recent call last):
+        ...
+    MemoryError
+
+Expected output:
+    >>> text_indentation(" This: not that,  or that;  but this. and ?this")
+     This:
+    <BLANKLINE>
+    not that,  or that;  but this.
+    <BLANKLINE>
+    and ?
+    <BLANKLINE>
+    this
+

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # 0-add_integer function
 
 Import the function:
@@ -41,3 +43,13 @@ test adding a list:
         ...
     TypeError: a must be an integer
 
+test negative sum:
+    >>> add_integer(9, -18)
+    -9
+
+
+test float overflow:
+    >>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
