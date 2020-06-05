@@ -14,17 +14,21 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
 
     for row in matrix:
+        rowx = []
         if x != 0:
             if x != len(row):
-                raise TypeError("Each row of the matrix\
-                                 must have the same size")
+                raise TypeError(
+                    "Each row of the matrix must have the same size")
         else:
             x = len(row)
 
         for i in row:
             if (not isinstance(i, int) and not isinstance(i, float)):
-                raise TypeError("matrix must be a matrix\
-                            (list of lists) of integers/floats")
-            mtrx.append(round((i / div), 2))
+                raise TypeError(
+                    "matrix must be a matrix" +
+                    " (list of lists) of integers/floats")
+            rowx.append(round((i / div), 2))
+
+        mtrx.append(rowx)
 
     return (mtrx)
