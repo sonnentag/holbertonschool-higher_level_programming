@@ -8,7 +8,7 @@ all int/float:
     >>> matrix_divided(matrix, 2)
     Traceback (most recent call last):
         ...
-    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+    TypeError: matrix must be a matrix (list of lists) of integers/floats 
 
 len matrix 0 == len matrix 1:
     >>> matrix = [ [1, 2, 3], [4, 5, 6, 7] ]
