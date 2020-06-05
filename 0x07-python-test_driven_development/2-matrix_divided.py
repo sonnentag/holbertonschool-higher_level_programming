@@ -1,7 +1,27 @@
 #!/usr/bin/python3
+"""2-matrix_divided"""
+
 
 def matrix_divided(matrix, div):
-    l1 = len(matrix)
-    l2 = len(matrix[0])
-    l3 = len(matrix[1])
-    return l1, l2, l3
+    """matrix divided"""
+
+    mtrx = []
+    x = 0
+
+    if div is 0:
+        raise ZeroDivisionError("division by zero")
+    if not isinstance(div, int) and not isinstance(div, float):
+        raise TypeError("div must be a number")
+
+    for row in matrix:
+        if x != 0:
+            if x != len(row):
+                raise TypeError("Each row of the matrix\
+                                 must have the same size")
+        else:
+            x = len(row)
+
+    for row in matrix:
+            mtrx.append([round((x / div)+10**(-2*6), 2) for x in row])
+
+    return (mtrx)
