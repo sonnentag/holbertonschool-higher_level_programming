@@ -7,10 +7,8 @@ class MyList(list):
 
     def __init__(self):
         """init"""
-
         pass
 
     def print_sorted(self):
         """printed_sort"""
-
         print(sorted(self))
