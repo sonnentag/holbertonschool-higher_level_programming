@@ -114,10 +114,18 @@ class Rectangle(Base):
     def display(self):
         """print rectangle"""
 
+        y = self.__y
         if self.__width is 0 or self.__height is 0:
             return ""
         rect = ""
+        while y > 0:
+            rect += "\n"
+            y -= 1
         for a in range(self.__height):
+            x = self.__x
+            while x > 0:
+                rect += " "
+                x -= 1
             for b in range(self.__width):
                 rect += "#"
             if a is not self.__height - 1:
