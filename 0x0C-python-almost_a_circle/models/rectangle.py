@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """rectangle module"""
 
-
 from models.base import Base
 
+
 class Rectangle(Base):
-"""Rectangle class"""
+    """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-    """init rectangle"""
+        """init rectangle"""
 
         self.__x = x
         self.__y = y
@@ -55,7 +55,6 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-
     @property
     def height(self):
         """height getter"""
@@ -72,7 +71,6 @@ class Rectangle(Base):
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-
 
     @property
     def x(self):
@@ -128,8 +126,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """return object as printable string"""
-        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height))
 
+        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+                self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
         """update a variable number of attributes"""
