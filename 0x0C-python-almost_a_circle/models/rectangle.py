@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """rectangle module"""
-
 from models.base import Base
 
 
@@ -41,13 +40,11 @@ class Rectangle(Base):
     @property
     def width(self):
         """width getter"""
-
         return self.__width
 
     @width.setter
     def width(self, value):
         """width setter"""
-
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -147,3 +144,10 @@ class Rectangle(Base):
             for k in ['id', 'width', 'height', 'x', 'y']:
                 if k in kwargs:
                     setattr(self, k, kwargs[k])
+
+    def to_dictionary(self):
+        """return square attributes as dict"""
+
+        dictnry = {'id': self.id, 'width': self.width, 
+                      'height': self.height, 'x': self.x, 'y': self.y}
+        return (dictnry)

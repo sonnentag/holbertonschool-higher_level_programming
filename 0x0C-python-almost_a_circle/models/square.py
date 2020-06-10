@@ -40,10 +40,18 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update a variable number of attributes"""
+        c = 0
+        keys = ['id', 'size', 'x', 'y']
         if len(args):
-            for k, v in zip(['id', 'size', 'x', 'y'], args):
-                setattr(self, k, v)
+            for v in args:
+                setattr(self, keys[c], v)
         else:
-            for k in ['id', 'size', 'x', 'y']:
+            for k in keys:
                 if k in kwargs:
                     setattr(self, k, kwargs[k])
+
+    def to_dictionary(self):
+        """return square attributes as dict"""
+        dictnry = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+
+        return (dictnry)
