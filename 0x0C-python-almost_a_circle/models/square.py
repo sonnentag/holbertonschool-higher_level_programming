@@ -9,15 +9,14 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """init square"""
-        self.__size = size
+
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
         """size getter"""
 
-        if Rectangle.width.__get__(self) == Rectangle.height.__get__(self):
-            return Rectangle.width.__get__(self)
+        return Rectangle.width.__get__(self)
 
     @size.setter
     def size(self, value):
@@ -30,13 +29,12 @@ class Square(Rectangle):
         else:
             self.__width = value
             self.__height = value
-            self.__size = value
 
     def __str__(self):
         """return object as printable string"""
 
-        return ("[{}] ({}) {}/{} - {}".format(type(self).__name__,
-                self.id, self.x, self.y, self.__size))
+        return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
+                self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """update a variable number of attributes"""

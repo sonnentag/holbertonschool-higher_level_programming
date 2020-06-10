@@ -15,29 +15,48 @@ class Base():
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """to_json_string"""
         jstr = []
         if list_dictionaries:
             jstr = json.dumps(list_dictionaries, sort_keys=True)
-
         return (jstr)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """save_to_file"""
-        pass
+        jstr = []
+        if list_objs:
+            jstr = cls.to_json_string([obj.to_dictionary()
+                                      for obj in list_objs])
+        with open(cls.__name__ + '.json',
+                  mode="w", encoding="utf-8") as myFile:
+            json.dump(jstr, myFile)
 
+    @staticmethod
     def from_json_string(json_string):
         """from_json_string"""
-        pass
+        rstr = []
+        if json_string:
+            rstr = json.loads(json_string)
+        return (rstr)
 
+    @classmethod
     def create(cls, **dictionary):
         """create"""
-        pass
+        if cls.__name__ == "Rectangle":
+            retd = cls(1, 1)
+        if cls.__name__ == "Square":
+            retd = cls(1, 1)
+        retd.update(**dictionary)
+        return (retd)
 
+    @classmethod
     def load_from_file(cls):
         """load_from_file"""
-        pass
+        j = []
+        return (j)
 
     def save_to_file_csv(cls, list_objs):
         """save_to_file_csv"""
