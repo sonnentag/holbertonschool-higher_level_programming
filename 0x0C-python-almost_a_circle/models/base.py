@@ -18,7 +18,7 @@ class Base():
     @staticmethod
     def to_json_string(list_dictionaries):
         """to_json_string"""
-        jstr = []
+        jstr = "[]"
         if list_dictionaries:
             jstr = json.dumps(list_dictionaries, sort_keys=True)
         return (jstr)
