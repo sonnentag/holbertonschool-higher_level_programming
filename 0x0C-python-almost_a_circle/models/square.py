@@ -42,7 +42,11 @@ class Square(Rectangle):
         keys = ['id', 'size', 'x', 'y']
         if len(args):
             for v in args:
-                setattr(self, keys[c], v)
+                if keys[c] == 'size':
+                    setattr(self, 'width', v)
+                    setattr(self, 'height', v)
+                else:
+                    setattr(self, keys[c], v)
                 c += 1
         else:
             for k in keys:
