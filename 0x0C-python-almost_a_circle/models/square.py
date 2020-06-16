@@ -47,7 +47,6 @@ class Square(Rectangle):
                     setattr(self, 'height', v)
                 else:
                     setattr(self, keys[c], v)
-                    print(keys[c])
                 c += 1
         else:
             for k in keys:
