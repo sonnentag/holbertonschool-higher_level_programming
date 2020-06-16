@@ -16,7 +16,7 @@ class Square(Rectangle):
     def size(self):
         """size getter"""
 
-        return Rectangle.width.__get__(self)
+        return (self.width)
 
     @size.setter
     def size(self, value):
@@ -27,8 +27,8 @@ class Square(Rectangle):
         elif value <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.__width = value
-            self.__height = value
+            self.width = value
+            self.height = value
 
     def __str__(self):
         """return object as printable string"""
