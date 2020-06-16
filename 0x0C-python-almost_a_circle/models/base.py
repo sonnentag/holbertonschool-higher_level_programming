@@ -30,7 +30,7 @@ class Base():
         if not list_objs:
             with open(fn, 'w', encoding='utf-8') as f:
                 json.dump(jstr, f)
-        else: 
+        else:
             jstr = cls.to_json_string([obj.to_dictionary()
                                       for obj in list_objs])
             with open(cls.__name__ + '.json',
