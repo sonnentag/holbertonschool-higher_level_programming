@@ -28,7 +28,7 @@ class Base():
         """save_to_file"""
         jstr = []
         if not list_objs:
-            with open(cls.__name__ + '.json', 
+            with open(cls.__name__ + '.json',
                       mode="w", encoding='utf-8') as f:
                 json.dump(jstr, f)
         else:
