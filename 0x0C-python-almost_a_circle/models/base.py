@@ -26,13 +26,14 @@ class Base():
     @classmethod
     def save_to_file(cls, list_objs):
         """save_to_file"""
-        jstr = []
-        if list_objs:
+        if not list_objs:
+            jstr = []
+        else: 
             jstr = cls.to_json_string([obj.to_dictionary()
                                       for obj in list_objs])
         with open(cls.__name__ + '.json',
                   mode="w", encoding="utf-8") as myFile:
-            json.dump(jstr, myFile)
+            json.dumps(jstr, myFile)
 
     @staticmethod
     def from_json_string(json_string):
@@ -45,18 +46,30 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """create"""
+        retd = None
         if cls.__name__ == "Rectangle":
             retd = cls(1, 1)
-        if cls.__name__ == "Square":
-            retd = cls(1, 1)
+        elif cls.__name__ == "Square":
+            retd = cls(1)
+        else:
+            return (retd)
         retd.update(**dictionary)
         return (retd)
 
     @classmethod
     def load_from_file(cls):
         """load_from_file"""
-        j = []
-        return (j)
+        instances = []
+        try:
+            with open(cls.__name__ + '.json',
+                      mode="r", encoding="utf-8") as myFile:
+                jfile = myFile.read()
+                instances = cls.from_json_string(jfile)
+            for instance in instances:
+                instances.append(cls.create(**instance))
+            return (instances)
+        except FileNotFoundError:
+            return (instances)
 
     def save_to_file_csv(cls, list_objs):
         """save_to_file_csv"""
