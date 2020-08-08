@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ lists all states from a database providing connection info as args"""
 
 from sys import argv
