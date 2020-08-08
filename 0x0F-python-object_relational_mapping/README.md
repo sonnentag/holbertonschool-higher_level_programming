@@ -9,3 +9,5 @@ lists all states with state as argv4
 lists all states with state as named value to protect against sql injection 
 #### 4-cities_by_state.py
 list all cities by state
+#### 5-filter_cities.py
+list all cities by state provided as arg
