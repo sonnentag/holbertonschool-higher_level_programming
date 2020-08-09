@@ -15,8 +15,9 @@ if __name__ == '__main__':
 
     cur = db.cursor()
 
-    sql = 'SELECT c.id, c.name, s.name FROM cities c, states s \
-        WHERE c.state_id = s.id AND s.name = %s ORDER BY id ASC'
+    sql = "SELECT GROUP_CONCAT(c.name SEPARATOR ', ') \
+        FROM cities c, states s \
+        WHERE c.state_id = s.id AND s.name = %s"
 
     cur.execute(sql, (state, ))
 
