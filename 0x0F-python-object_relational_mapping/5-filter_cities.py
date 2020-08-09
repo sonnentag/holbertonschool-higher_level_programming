@@ -22,4 +22,7 @@ if __name__ == '__main__':
     cur.execute(sql, (state, ))
 
     for row in cur.fetchall():
-        print(row)
+        if row[0] is not None:
+            print(row[0])
+        else:
+            print()
