@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
 
-    sql = 'SELECT id, name FROM states WHERE name LIKE "N%" ORDER BY id ASC'
+    sql = 'SELECT id, name FROM states WHERE name LIKE "N%%" ORDER BY id ASC'
 
     cur.execute(sql)
 
