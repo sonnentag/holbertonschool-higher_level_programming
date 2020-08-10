@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     sess = Session()
 
-    sess.add(State(name='state'))
+    sess.add(State(name=state))
 
     sess.commit()
 
