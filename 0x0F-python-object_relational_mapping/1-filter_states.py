@@ -19,4 +19,5 @@ if __name__ == '__main__':
     cur.execute(sql)
 
     for row in cur.fetchall():
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
