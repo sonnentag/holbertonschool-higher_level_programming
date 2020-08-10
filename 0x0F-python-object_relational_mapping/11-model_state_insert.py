@@ -14,7 +14,7 @@ if __name__ == '__main__':
     db_pass = argv[2]
     db_name = argv[3]
 
-    state = 'Lousiana'
+    state = 'Louisiana'
 
     db = 'mysql+mysqldb://{}:{}@localhost/{}'.format(db_user, db_pass, db_name)
 
