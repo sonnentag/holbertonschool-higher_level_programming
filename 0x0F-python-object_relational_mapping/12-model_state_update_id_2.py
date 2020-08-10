@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     sess = Session()
 
-    sess.query(State).filter(State.id == '3').one().name = 'New Mexico'
+    sess.query(State).filter(State.id == '2').one().name = 'New Mexico'
 
     sess.commit()
 
