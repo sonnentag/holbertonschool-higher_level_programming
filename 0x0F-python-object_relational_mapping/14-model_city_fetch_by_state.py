@@ -19,9 +19,9 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=create_engine(db))
 
-    ses = Session()
+    sess = Session()
 
-    for c, s in ses.query(City, State).filter(City.state_id == State.id).all():
+    for c, s in sess.query(City, State).filter(City.state_id == State.id):
         print("{}: ({}) {}".format(s.name, c.id, c.name))
 
-    ses.close()
+    sess.close()
