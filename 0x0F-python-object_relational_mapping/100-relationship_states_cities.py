@@ -23,9 +23,9 @@ if __name__ == '__main__':
 
     sess = Session()
 
-    cali = State(name='California')
-    cali.cities = [City(name='San Francisco')]
-    sess.add(cali)
+    ca = State(name='California')
+    ca.cities = [City(name='San Francisco')]
+    sess.add(ca)
 
     sess.commit()
 
