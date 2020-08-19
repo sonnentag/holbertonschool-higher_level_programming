@@ -7,3 +7,9 @@ GET body of site at first argument
 send delete request to url provided
 #### 3-methods.sh
 print a url's allowed methods
+#### 4-header.sh
+send header with GET to provided url
+#### 5-post_params.sh
+send post params to provided url
+#### 100-status_code.sh
+get http status code from request to provided url
