@@ -13,3 +13,5 @@ send header with GET to provided url
 send post params to provided url
 #### 100-status_code.sh
 get http status code from request to provided url
+#### 102-catch_me.sh
+follow provided url passing parameters and header
