@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" update name of state with id 2 to New Mexico """
+""" update/add State California with City San Francisco"""
 
 from sys import argv
 from relationship_state import Base, State
