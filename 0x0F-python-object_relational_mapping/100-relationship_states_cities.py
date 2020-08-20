@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ update/add State California with City San Francisco"""
 
-from sys import argv
 from relationship_state import Base, State
+from relationship_city import City
+import sqlalchemy
 from sqlalchemy import create_engine, select, Table, MetaData
 from sqlalchemy.orm import sessionmaker
-from relationship_city import City
+from sys import argv
 
 
 if __name__ == '__main__':

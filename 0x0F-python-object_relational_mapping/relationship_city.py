@@ -2,10 +2,7 @@
 """ the class definition of a city """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from relationship_state import Base, State
 
 
 class City(Base):
@@ -18,4 +15,4 @@ class City(Base):
 
     name = Column(String(128), nullable=False)
 
-    state_id = Column(Integer, ForeignKey('state.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey(State.id), nullable=False)
