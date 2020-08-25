@@ -2,13 +2,14 @@
 """ POST email address to url and print the response """
 
 from sys import argv
-from urllib import request, parse
+from urllib import request, parse, error
 
 
 if __name__ == '__main__':
     ''' main '''
 
-    data = parse.urlencode({'email': argv[2]})
-
-    with request.urlopen(argv[1], data.encode('ascii')) as response:
-        print(response.read().decode('utf8'))
+    try:
+        with request.urlopen(argv[1]) as response:
+            print(response.read().decode('utf-8'))
+    except error.HTTPError as err:
+        print("Error code: {}".format(err.code))
