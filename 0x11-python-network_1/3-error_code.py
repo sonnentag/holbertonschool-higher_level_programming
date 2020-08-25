@@ -8,9 +8,3 @@ data = parse.urlencode({'email': argv[2]})
 
 with request.urlopen(argv[1], data.encode('ascii')) as response:
     print(response.read().decode('utf8'))
-
-    try:
-        url = sys.argv[1]
-        with urllib.request.urlopen(url) as response:
-            html = response.read().decode('utf8')
-            print(html)
