@@ -5,4 +5,4 @@ from sys import argv
 
 with request.urlopen(argv[1]) as response:
     headers = response.info()
-    print(headers['X-Request-Id'])
+    print(headers('X-Request-Id'))
