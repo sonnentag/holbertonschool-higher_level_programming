@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ get specific header from provided url """
 from urllib import request
 from sys import argv
