@@ -3,13 +3,13 @@
 
 const size = process.argv[2];
 let count = 1;
-let output = 'x';
+let output = 'X';
 
 if (isNaN(size)) {
   console.log('Missing size');
 } else {
   while (count < size) {
-    output = output + 'x';
+    output = output + 'X';
     count += 1;
   }
   count = 0;
