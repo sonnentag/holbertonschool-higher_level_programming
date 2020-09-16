@@ -8,7 +8,7 @@ let res = -Infinity;
 let cur;
 
 while (process.argv[idx]) {
-  if (isNaN(process.argv[idx]) || process.argv.length <= 3) {
+  if (isNaN(process.argv[idx]) || process.argv.length <= 2) {
     res = 0;
   }
   arr.push(process.argv[idx]);
