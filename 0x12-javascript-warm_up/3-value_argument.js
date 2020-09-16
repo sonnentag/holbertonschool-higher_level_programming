@@ -1,8 +1,4 @@
 #!/usr/bin/node
-// output according to number of args 
+// output according to number of args
 
-const firstArg = process.argv[2];
-
-const myVar = (firstArg) ? firstArg : 'No argument';
-
-console.log(myVar);
+console.log((process.argv[2]) ? process.argv[2] : 'No argument');
