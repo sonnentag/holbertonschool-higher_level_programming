@@ -2,6 +2,9 @@
 const filename = process.argv[2];
 const fs = require('fs');
 fs.readFile(filename, 'utf8', (err, data) => {
-  if (err) return console.log(err);
+  if (err) {
+    console.error(err);
+    return;
+  }
   console.log(data);
 });
