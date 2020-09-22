@@ -5,6 +5,6 @@ const opts = {
   url: process.argv[2]
 };
 request(opts, (err, res) => {
-  if (err) return console.err(err);
+  if (err) return console.error(err);
   console.log('code: %d', res.statusCode);
 });
